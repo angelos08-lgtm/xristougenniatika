@@ -1,45 +1,77 @@
-/* Γενικό styling για τα Χριστουγεννιάτικα Έθιμα */
+/* Βασικό styling */
 #christmas_section {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff7f0;
+  max-width: 1000px;
+  margin: 40px auto;
   padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  max-width: 900px;
-  margin: 20px auto;
+  background: linear-gradient(135deg, #fff7f0 0%, #ffe6cc 100%);
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
+/* Τίτλος & εισαγωγή */
 #christmas_title {
   text-align: center;
+  font-size: 2.5rem;
   color: #c70000;
-  font-size: 2.2rem;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 #christmas_intro {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  text-align: justify;
-  margin-bottom: 30px;
+  font-size: 1.15rem;
   color: #333;
+  text-align: justify;
+  margin-bottom: 40px;
 }
 
-#christmas_customs article {
+/* Κάρτες εθίμων */
+.custom_card {
   background-color: #fff3e6;
-  padding: 20px;
-  border-left: 5px solid #c70000;
   margin-bottom: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
+  border-left: 5px solid #c70000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#christmas_customs h2 {
+.custom_card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.custom_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+.custom_header h2 {
+  font-size: 1.6rem;
   color: #d94f00;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
 }
 
-#christmas_customs p {
+.toggle_btn {
+  font-size: 1.4rem;
+  transition: transform 0.3s ease;
+}
+
+.custom_body {
   font-size: 1rem;
   line-height: 1.5;
   color: #444;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+  #christmas_section {
+    padding: 20px;
+  }
+
+  .custom_header h2 {
+    font-size: 1.3rem;
+  }
 }
