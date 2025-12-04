@@ -1,15 +1,23 @@
   /* Splash Screen */
-  #splash {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: url('https://www.dia-trofis.gr/wp-content/uploads/2017/12/Christmasy-home.jpg') center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 1s ease;
-    z-index: 1000;
-  }
+#splash {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url('https://www.dia-trofis.gr/wp-content/uploads/2017/12/Christmasy-home.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  z-index: 10000; /* πολύ υψηλό για να καλύπτει τα πάντα */
+  transition: opacity 1s ease;
+}
+
 
   #splash button {
     padding: 20px 50px;
@@ -223,6 +231,7 @@ main {
   .story-block p { font-size: 0.9em; }
   .slider, .story-slider { aspect-ratio: 4 / 3; }
 }
+
 
 
 
