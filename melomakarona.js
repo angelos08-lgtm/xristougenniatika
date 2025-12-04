@@ -110,13 +110,12 @@ fetch('partials/layout.html')
         toggle.innerHTML = '&#9660;';
       }
     });
-  });
 
-});
 
 
     }); // requestAnimationFrame
   })
   .catch(err => console.error('Σφάλμα φόρτωσης layout:', err));
+
 
 
