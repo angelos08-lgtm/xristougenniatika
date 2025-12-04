@@ -1,60 +1,45 @@
-#customs-info {
-  background: var(--card);
-  padding: 20px;
+/* Γενικό styling για τα Χριστουγεννιάτικα Έθιμα */
+#christmas_section {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff7f0;
+  padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin: 20px auto;
 }
 
-#customs-info h2 {
-  color: var(--accent);
-  margin-bottom: 12px;
+#christmas_title {
+  text-align: center;
+  color: #c70000;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
 }
 
-#customs-info p {
-  color: var(--text);
+#christmas_intro {
+  font-size: 1.1rem;
   line-height: 1.6;
-  font-size: 15px;
+  text-align: justify;
+  margin-bottom: 30px;
+  color: #333;
 }
 
-.slider {
-  flex: 1 1 500px;
-  max-width: 600px; /* περιορίζει το πλάτος */
-  min-width: 250px; 
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  background: var(--card);
-  height: 300px; /* σταθερό ύψος */
+#christmas_customs article {
+  background-color: #fff3e6;
+  padding: 20px;
+  border-left: 5px solid #c70000;
+  margin-bottom: 20px;
+  border-radius: 8px;
 }
 
-.slides-wrapper img {
-  width: 100%;
-  height: 100%; /* να γεμίζει το container */
-  object-fit: cover; /* κρατάει αναλογία και γεμίζει σωστά */
-  border-radius: 12px;
-  opacity: 0;
-  transition: opacity 0.6s ease;
+#christmas_customs h2 {
+  color: #d94f00;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
-
-
-
-
-
-
-
-
-/* Σιγουρεύουμε ότι τα story-boxes και ο slider δουλεύουν σε μικρές οθόνες */
-@media (max-width: 520px) {
-  .hero-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .story-boxes {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
+#christmas_customs p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
 }
-
