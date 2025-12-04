@@ -90,12 +90,20 @@ li {
 /* ===============================
         HERO SLIDER
    =============================== */
+.hero-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap; /* για να κατέβει κάτω σε μικρές οθόνες */
+}
+
 .slider {
+  flex: 1 1 500px;
+  max-width: 600px;
   position: relative;
-  width: 1000px;
   overflow: hidden;
   border-radius: 12px;
-  margin-bottom: 30px;
   background: var(--card);
 }
 
@@ -105,7 +113,7 @@ li {
 }
 
 .slides-wrapper img {
-  width: 1000px;
+  width: 100%;
   display: block;
   border-radius: 12px;
   opacity: 0;
@@ -160,6 +168,11 @@ li {
   background: var(--accent);
 }
 
+.slider-text {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
 /* ===============================
         VIDEO WRAPPER
    =============================== */
@@ -198,6 +211,8 @@ li {
   .video-wrapper iframe {
     height: 220px;
   }
+  .hero-container {
+    flex-direction: column; /* slider και κείμενο κάτω-κάτω σε μικρές οθόνες */
+    align-items: center;
+  }
 }
-
-
