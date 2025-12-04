@@ -251,13 +251,14 @@ function initSliderById(sliderId, images) {
 // -------------------- Αρχικοποίηση όλων των sliders -------------------- //
 function initAllSliders() {
   // Κύριο slider
-  initSliderById('mainSlider', [
+initSliderById('mainSlider', [
     "https://png.pngtree.com/thumb_back/fw800/background/20251007/pngtree-cozy-christmas-living-room-interior-with-a-lit-fireplace-hanging-stockings-image_19772812.webp",
     "https://www.schooltime.gr/wp-content/uploads/2020/12/xristougenna-xristougenniatika-ethima-new.jpg",
-    "https://www.mywhy.gr/wp-content/uploads/2024/11/pexels-marceloverfe-19035035-scaled.jpg"
+    "https://www.mywhy.gr/wp-content/uploads/2024/11/pexels-marceloverfe-19035035-scaled.jpg",
     "https://stories.thriveglobal.gr/wp-content/uploads/2021/11/family-time.jpg",
-    "https://media.oneman.gr/onm-images/bazaar-3-681x454.jpg" 
-  ]);
+    "https://media.oneman.gr/onm-images/bazaar-3-681x454.jpg"
+]);
+
 
   // Sliders γλυκών
   initSliderById('slider-kourampiedes', [
@@ -278,6 +279,7 @@ function initAllSliders() {
     "εικόνα3_δίπλα.jpg"
   ]);
 }
+
 
 
 
