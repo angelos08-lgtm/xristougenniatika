@@ -146,8 +146,10 @@ header button:hover {
 .submenu-title {
   font-weight: bold;
   padding: 8px 15px;
-  color: #c00;
+  color: #33d500;
   font-size: 0.95rem;
+  text-align: left;   
+  display: block;  
 }
 
 
@@ -179,6 +181,7 @@ header button:hover {
 .submenu-toggle.open::after {
   content: " ▲";
 }
+
 
 
 
