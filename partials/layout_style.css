@@ -1,0 +1,184 @@
+/* ----------- Βασικό Layout ----------- */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+}
+
+/* Το main μεγαλώνει για να γεμίσει τον χώρο */
+main#content {
+  flex: 1;
+}
+
+/* Κολλημένο footer */
+#footer1 {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
+}
+
+/* Header */
+#header1 {
+	position: relative;
+  background-color: #d47a22;
+  color: white;
+  text-align: center;
+  padding: 5px 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  line-height: 1;
+   margin: 0;
+    font-size: 13px; 
+}
+/* Κουμπί μενού */
+header button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: #8b0606;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+header button:hover {
+  background-color: #666;
+}
+
+/* ----------- Side Menu ----------- */
+#sideMenu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #bd6e21c7;
+  overflow-x: hidden;
+  transition: width 0.4s ease, opacity 0.4s ease;
+  padding-top: 60px;
+  opacity: 0;
+  z-index: 1001;
+}
+
+#sideMenu.open {
+  width: 250px;
+  opacity: 1;
+}
+
+#sideMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 95%;
+}
+
+
+#sideMenu ul li {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#sideMenu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+#sideMenu ul li a:hover {
+  text-decoration: underline;
+}
+
+#closeMenu {
+  position: absolute;
+  top: 23px;
+  right: 25px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+
+#sideMenu ul li.menu-bottom {
+  margin-top: auto;        /* σπρώχνει το link στο κάτω μέρος */
+  border-top: 1px solid #fff5; /* προαιρετικό, για διαχωρισμό */
+  padding-top: 10px;
+}
+
+#sideMenu ul li.menu-bottom a {
+  color: #ffeb3b;         /* ξεχωριστό χρώμα */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#sideMenu ul li.menu-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Κρυφό υπομενού */
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  margin-left: 15px;
+  padding-left: 10px;
+  border-left: 2px solid #fff5;
+  transition: max-height 1s ease, opacity 1s ease;
+  opacity: 0;
+}
+
+.submenu.open {
+  max-height: 500px; /* αρκετό για να χωρέσει όλα τα li */
+  opacity: 1;
+}
+
+
+/* Κουμπί υπομενού */
+.has-submenu .submenu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 0;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+/* Hover */
+.has-submenu .submenu-toggle:hover {
+  opacity: 0.8;
+}
+
+
+/* --- Προσθήκη: Βελάκια μέσω CSS --- */
+.submenu-toggle::after {
+  content: " ▼";
+  float: right;        /* Προαιρετικό: βάζει το βελάκι δεξιά */
+}
+
+.submenu-toggle.open::after {
+  content: " ▲";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
