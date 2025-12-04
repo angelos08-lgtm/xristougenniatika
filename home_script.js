@@ -1,52 +1,3 @@
-// -------------------- Splash Screen -------------------- //
-const splashHTML = `
-  <div id="splash" style="
-    position: fixed;
-    top:0; left:0;
-    width:100%; height:100%;
-    background: url('https://images.unsplash.com/photo-1605859676666-8b12280a63a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-4.0.3&q=80&w=1080') center/cover no-repeat;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:#fff;
-    font-family: Arial, sans-serif;
-    z-index:10000;
-    transition: opacity 1s ease;
-  ">
-    <h1 style="font-size:2.5em; margin-bottom:20px; text-shadow: 2px 2px 5px #000;">Μπείτε στον Χριστουγεννιάτικο κόσμο</h1>
-    <button id="enterBtn" style="
-      padding:20px 50px;
-      font-size:1.5em;
-      border:none;
-      border-radius:50px;
-      background: rgba(255,76,96,0.9);
-      color:#fff;
-      cursor:pointer;
-      transition: all 0.3s ease;
-    ">Είσοδος</button>
-  </div>
-`;
-document.body.insertAdjacentHTML('afterbegin', splashHTML);
-
-// Απόκρυψη περιεχομένου έως ότου κλείσει το splash
-const layoutContainer = document.createElement('div');
-layoutContainer.id = 'layoutWrapper';
-layoutContainer.style.display = 'none';
-document.body.appendChild(layoutContainer);
-
-// -------------------- Event Splash -------------------- //
-document.getElementById('enterBtn').addEventListener('click', () => {
-  const splash = document.getElementById('splash');
-  splash.style.opacity = '0';
-  setTimeout(() => {
-    splash.style.display = 'none';
-    layoutContainer.style.display = 'block';
-    // Φόρτωση layout και περιεχομένου μετά το splash
-    loadLayout();
-  }, 1000);
-});
 
 
 // -------------------- Φόρτωση layout -------------------- //
@@ -330,6 +281,7 @@ initSliderById('mainSlider', [
     "εικόνα3_δίπλα.jpg"
   ]);
 }
+
 
 
 
