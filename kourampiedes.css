@@ -95,14 +95,15 @@ li {
   gap: 20px;
   justify-content: center;
   align-items: flex-start;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* επιτρέπει στα κουτάκια να πέσουν κάτω σε μικρές οθόνες */
   width: 100%;
   margin-bottom: 30px;
 }
 
 .slider {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
+  min-width: 250px; /* αποφυγή να μικρύνει υπερβολικά */
   position: relative;
   overflow: hidden;
   border-radius: 12px;
@@ -171,8 +172,9 @@ li {
 }
 
 .slider-text {
-  flex: 1 1 300px;
+  flex: 1 1 250px;
   max-width: 400px;
+  min-width: 220px; /* αποφυγή να μικρύνει υπερβολικά */
 }
 
 .slider-text ul {
@@ -192,7 +194,7 @@ li {
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* κουτάκια πάνε κάτω αν η οθόνη μικρύνει */
   margin: 30px 0;
 }
 
@@ -204,6 +206,8 @@ li {
   width: 220px;
   text-align: center;
   transition: transform 0.2s;
+  flex: 1 1 220px;
+  min-width: 180px;
 }
 
 .story-box img {
@@ -282,3 +286,4 @@ li {
     gap: 15px;
   }
 }
+
