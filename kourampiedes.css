@@ -196,6 +196,7 @@ li {
   gap: 20px;
   flex-wrap: wrap; /* κουτάκια πάνε κάτω αν η οθόνη μικρύνει */
   margin: 30px 0;
+  margin-right: 100px;
 }
 
 .story-box {
@@ -286,4 +287,5 @@ li {
     gap: 15px;
   }
 }
+
 
