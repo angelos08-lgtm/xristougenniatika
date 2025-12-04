@@ -10,67 +10,59 @@ fetch('partials/layout.html')
     document.body.appendChild(script);
 
     // Εισαγωγή περιεχομένου Επικοινωνίας στο <main id="content">
-    requestAnimationFrame(() => {
-      const main = document.getElementById('content');
-      main.innerHTML = `
-    <header>
-      <h1 id="titlearticle">Μαγικά Παιδικά Χριστούγεννα</h1>
-      <p class="lead">Ιστορίες, παιχνίδια και γλυκές αναμνήσεις για τα παιδιά</p>
-    </header>
+requestAnimationFrame(() => {
+  const main = document.getElementById('content');
+  main.innerHTML = `
+<header>
+  <h1 id="titlearticle">Μαγικά Παιδικά Χριστούγεννα</h1>
+  <p class="lead">Ιστορίες, παιχνίδια και γλυκές αναμνήσεις για τα παιδιά</p>
+</header>
 
-    <!-- Hero Slider -->
-    <div class="slider" id="heroSlider">
-      <div class="slides-wrapper"></div>
-      <button class="prev">❮</button>
-      <button class="next">❯</button>
-      <div class="dots"></div>
-    </div>
+<!-- Hero Slider με κείμενο δίπλα -->
+<div class="hero-container">
+  <div class="slider" id="heroSlider">
+    <div class="slides-wrapper"></div>
+    <button class="prev">❮</button>
+    <button class="next">❯</button>
+    <div class="dots"></div>
+  </div>
 
-    <!-- Βιβλία / Παραμύθια -->
-    <section id="books">
-      <h2>Χριστουγεννιάτικες Ιστορίες για Παιδιά</h2>
-      <div class="book-list">
-        <div class="book">
-          <img src="https://images.unsplash.com/photo-1606229063562-07d72f54f986" alt="Παραμύθι 1">
-          <h3>Το Μικρό Έλατο</h3>
-          <p>Ένα μικρό έλατο θέλει να στολίσει τον κόσμο με φως και χαρά.</p>
-        </div>
-        <div class="book">
-          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Παραμύθι 2">
-          <h3>Η Περιπέτεια του Άγιου Βασίλη</h3>
-          <p>Ακολούθησε τον Άγιο Βασίλη στο μαγικό του ταξίδι.</p>
-        </div>
-        <div class="book">
-          <img src="https://images.unsplash.com/photo-1544935455-c5e7f8aa4826" alt="Παραμύθι 3">
-          <h3>Οι Μικροί Κουραμπιέδες</h3>
-          <p>Γλυκιά ιστορία για μικρά χεράκια που αγαπούν τη μαγειρική.</p>
-        </div>
-      </div>
-    </section>
+  <div class="slider-text">
+    <h2>Χριστουγεννιάτικες Ιστορίες για Παιδιά</h2>
+    <p>Ανακάλυψε μαγικές ιστορίες που φέρνουν χαρά στα παιδιά και ζεσταίνουν τις καρδιές τους.</p>
+    <ul>
+      <li>Το Μικρό Έλατο</li>
+      <li>Η Περιπέτεια του Άγιου Βασίλη</li>
+      <li>Οι Μικροί Κουραμπιέδες</li>
+    </ul>
+  </div>
+</div>
 
-    <!-- DIY / Δραστηριότητες -->
-    <section id="diy">
-      <h2>Δραστηριότητες & Χειροτεχνίες</h2>
-      <ul>
-        <li>Φτιάξε το δικό σου στολίδι από χαρτί και κορδέλες.</li>
-        <li>Ζωγράφισε την αγαπημένη σου χριστουγεννιάτικη σκηνή.</li>
-        <li>Μαγείρεψε μελομακάρονα ή κουραμπιέδες με τους γονείς σου.</li>
-      </ul>
-    </section>
+<!-- DIY / Δραστηριότητες -->
+<section id="diy">
+  <h2>Δραστηριότητες & Χειροτεχνίες</h2>
+  <ul>
+    <li>Φτιάξε το δικό σου στολίδι από χαρτί και κορδέλες.</li>
+    <li>Ζωγράφισε την αγαπημένη σου χριστουγεννιάτικη σκηνή.</li>
+    <li>Μαγείρεψε μελομακάρονα ή κουραμπιέδες με τους γονείς σου.</li>
+  </ul>
+</section>
 
-    <!-- Σύντομες ιστορίες -->
-    <section id="stories">
-      <h2>Μικρές Χριστουγεννιάτικες Ιστορίες</h2>
-      <div class="story">
-        <h3>Η νύχτα των αστεριών</h3>
-        <p>Ένα παιδί κοιτάζει τα αστέρια και φαντάζεται τον κόσμο γεμάτο φως και χαρά.</p>
-      </div>
-      <div class="story">
-        <h3>Το δώρο της καρδιάς</h3>
-        <p>Μια ιστορία για ένα δώρο που δεν κοστίζει χρήματα αλλά κάνει μεγάλη χαρά.</p>
-      </div>
-    </section>
-      `;
+<!-- Σύντομες ιστορίες -->
+<section id="stories">
+  <h2>Μικρές Χριστουγεννιάτικες Ιστορίες</h2>
+  <div class="story">
+    <h3>Η νύχτα των αστεριών</h3>
+    <p>Ένα παιδί κοιτάζει τα αστέρια και φαντάζεται τον κόσμο γεμάτο φως και χαρά.</p>
+  </div>
+  <div class="story">
+    <h3>Το δώρο της καρδιάς</h3>
+    <p>Μια ιστορία για ένα δώρο που δεν κοστίζει χρήματα αλλά κάνει μεγάλη χαρά.</p>
+  </div>
+</section>
+  `;
+});
+
 
       // ===========================
       // Hero Slider JS
@@ -134,3 +126,4 @@ fetch('partials/layout.html')
     }); // requestAnimationFrame
   }) // fetch then
   .catch(err => console.error('Σφάλμα φόρτωσης layout:', err));
+
