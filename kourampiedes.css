@@ -88,14 +88,16 @@ li {
 }
 
 /* ===============================
-        HERO SLIDER
+        HERO SLIDER + TEXT
    =============================== */
 .hero-container {
   display: flex;
   gap: 20px;
   justify-content: center;
   align-items: flex-start;
-  flex-wrap: wrap; /* για να κατέβει κάτω σε μικρές οθόνες */
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .slider {
@@ -173,14 +175,24 @@ li {
   max-width: 400px;
 }
 
+.slider-text ul {
+  padding-left: 1.2rem;
+  margin-top: 10px;
+}
 
+.slider-text li {
+  margin-bottom: 6px;
+  color: var(--text);
+}
 
-
+/* ===============================
+        STORY BOXES
+   =============================== */
 .story-boxes {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Απόσταση ανάμεσα στα κουτάκια */
-  flex-wrap: wrap; /* Για μικρές οθόνες να πάνε κάτω */
+  gap: 20px;
+  flex-wrap: wrap;
   margin: 30px 0;
 }
 
@@ -216,20 +228,6 @@ li {
   transform: translateY(-5px);
 }
 
-/* Responsive για μικρές οθόνες */
-@media (max-width: 520px) {
-  .story-boxes {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-}
-
-
-
-
-
-
 /* ===============================
         VIDEO WRAPPER
    =============================== */
@@ -254,23 +252,33 @@ li {
   .container {
     padding: 18px;
   }
+
   h1#titlearticle {
     font-size: 22px;
   }
+
   .book-list {
     flex-direction: column;
     align-items: center;
   }
+
   .prev, .next {
     font-size: 22px;
     padding: 6px 10px;
   }
+
   .video-wrapper iframe {
     height: 220px;
   }
+
   .hero-container {
-    flex-direction: column; /* slider και κείμενο κάτω-κάτω σε μικρές οθόνες */
+    flex-direction: column;
     align-items: center;
   }
-}
 
+  .story-boxes {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
