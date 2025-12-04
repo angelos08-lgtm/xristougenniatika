@@ -13,105 +13,54 @@ fetch('partials/layout.html')
     requestAnimationFrame(() => {
       const main = document.getElementById('content');
       main.innerHTML = `
-<header>
-  <h1 id="titlearticle">Χριστουγεννιάτικα Έθιμα στην Ελλάδα</h1>
-  <p class="lead">Ανακαλύψτε τα πιο όμορφα και μαγικά χριστουγεννιάτικα έθιμα ανά την Ελλάδα</p>
-</header>
+    <section id="christmas_section">
+      <h1 id="christmas_title">Χριστουγεννιάτικα Έθιμα της Ελλάδας</h1>
+      <p id="christmas_intro">
+        Τα Χριστούγεννα στην Ελλάδα συνοδεύονται από πλήθος παραδόσεων και τοπικών εθίμων που διαφέρουν από περιοχή σε περιοχή.
+        Από τη Βόρεια Ελλάδα μέχρι τα νησιά, κάθε τόπος γιορτάζει με τον δικό του μοναδικό τρόπο.
+      </p>
 
-<!-- Hero Slider -->
-<div class="hero-container">
-  <div class="slider" id="heroSlider">
-    <div class="slides-wrapper"></div>
-    <button class="prev">❮</button>
-    <button class="next">❯</button>
-    <div class="dots"></div>
-  </div>
-</div>
+      <div id="christmas_customs">
+        <article id="custom_thraki">
+          <h2 id="custom_thraki_title">Θράκη – Καλαντισμοί με Κλαρίνα</h2>
+          <p id="custom_thraki_desc">
+            Στην Ξάνθη και την Κομοτηνή, τα παιδιά πηγαίνουν από σπίτι σε σπίτι και τραγουδούν τα κάλαντα με παραδοσιακά μουσικά όργανα.
+          </p>
+        </article>
 
-<!-- 3 Κουτάκια Χριστουγεννιάτικων Εθίμων -->
-<div class="story-boxes">
-  <div class="story-box">
-    <img src="https://images.unsplash.com/photo-1606229063562-07d72f54f986" alt="Στολισμός Δέντρου">
-    <h3>Στολισμός Χριστουγεννιάτικου Δέντρου</h3>
-    <p>Παραδοσιακό έθιμο όπου οι οικογένειες στολίζουν δέντρα με φωτάκια και στολίδια.</p>
-  </div>
-  <div class="story-box">
-    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Κάλαντα">
-    <h3>Κάλαντα</h3>
-    <p>Τα παιδιά πηγαίνουν από σπίτι σε σπίτι τραγουδώντας κάλαντα και παίρνοντας λιχουδιές.</p>
-  </div>
-  <div class="story-box">
-    <img src="https://images.unsplash.com/photo-1544935455-c5e7f8aa4826" alt="Παραδοσιακά Γλυκά">
-    <h3>Παραδοσιακά Γλυκά</h3>
-    <p>Μαγείρεμα μελομακάρονων, κουραμπιέδων και άλλων γλυκών που γεμίζουν τα σπίτια με άρωμα Χριστουγέννων.</p>
-  </div>
-</div>
+        <article id="custom_macedonia">
+          <h2 id="custom_macedonia_title">Μακεδονία – Το «Κόλιαντα» και οι Φωτιές</h2>
+          <p id="custom_macedonia_desc">
+            Οι νέοι συγκεντρώνονται γύρω από φωτιές και τραγουδούν τα κάλαντα, ενώ οι γυναίκες φτιάχνουν παραδοσιακά γλυκά.
+          </p>
+        </article>
 
-<!-- Κείμενο Περιγραφής -->
-<section id="customs-info">
-  <h2>Παραδοσιακά Χριστουγεννιάτικα Έθιμα</h2>
-  <p>Η Ελλάδα είναι γεμάτη μαγικά έθιμα κατά την περίοδο των Χριστουγέννων. Από τα φωτάκια στα δέντρα και τα κάλαντα μέχρι τα παραδοσιακά γλυκά, κάθε γωνιά της χώρας γιορτάζει με χρώμα, χαρά και ζεστασιά.</p>
-</section>
-      `;
+        <article id="custom_epirus">
+          <h2 id="custom_epirus_title">Ήπειρος – Το Έθιμο της Βασιλόπιτας</h2>
+          <p id="custom_epirus_desc">
+            Κόβουν τη βασιλόπιτα με ειδικό νόημα για τον τυχερό της χρονιάς.
+          </p>
+        </article>
 
-      // ===========================
-      // Hero Slider JS
-      // ===========================
-      const sliderImages = [
-        "https://images.unsplash.com/photo-1606229063562-07d72f54f986",
-        "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
-        "https://images.unsplash.com/photo-1544935455-c5e7f8aa4826"
-      ];
+        <article id="custom_crete">
+          <h2 id="custom_crete_title">Κρήτη – Το Έθιμο της «Καμήλας»</h2>
+          <p id="custom_crete_desc">
+            Στην Κρήτη, τα παιδιά φτιάχνουν μικρές φιγούρες καμήλας από ξύλο ή ζυμάρι και τα παρουσιάζουν στις γειτονιές.
+          </p>
+        </article>
 
-      const slider = document.getElementById('heroSlider');
-      const wrapper = slider.querySelector('.slides-wrapper');
-      const dotsContainer = slider.querySelector('.dots');
-      const prevBtn = slider.querySelector('.prev');
-      const nextBtn = slider.querySelector('.next');
+        <article id="custom_islands">
+          <h2 id="custom_islands_title">Νησιά – Το έθιμο του Αγιοβασιλιάτικου Καραβιού</h2>
+          <p id="custom_islands_desc">
+            Στα νησιά του Αιγαίου, τα παιδιά φτιάχνουν μικρά καραβάκια που τα στολίζουν και τα αφήνουν στα σπίτια.
+          </p>
+        </article>
+      </div>
+    </section>
+  `;
 
-      let current = 0;
-      const slides = [];
-      const dots = [];
-      let autoplayInterval = null;
-      const AUTOPLAY_DELAY = 4000;
 
-      sliderImages.forEach((src, idx) => {
-        const img = document.createElement('img');
-        img.src = src;
-        if (idx === 0) img.classList.add('active');
-        wrapper.appendChild(img);
-        slides.push(img);
-
-        const dot = document.createElement('button');
-        if (idx === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => goTo(idx));
-        dotsContainer.appendChild(dot);
-        dots.push(dot);
-      });
-
-      function setActive(idx) {
-        slides[current].classList.remove('active');
-        slides[idx].classList.add('active');
-        dots[current].classList.remove('active');
-        dots[idx].classList.add('active');
-        current = idx;
-      }
-
-      function nextSlide() { setActive((current + 1) % slides.length); }
-      function prevSlide() { setActive((current - 1 + slides.length) % slides.length); }
-      function goTo(idx) { setActive(idx); restartAutoplay(); }
-
-      function startAutoplay() { stopAutoplay(); autoplayInterval = setInterval(nextSlide, AUTOPLAY_DELAY); }
-      function stopAutoplay() { if (autoplayInterval) clearInterval(autoplayInterval); }
-      function restartAutoplay() { stopAutoplay(); startAutoplay(); }
-
-      nextBtn.addEventListener('click', () => { nextSlide(); restartAutoplay(); });
-      prevBtn.addEventListener('click', () => { prevSlide(); restartAutoplay(); });
-
-      slider.addEventListener('mouseenter', stopAutoplay);
-      slider.addEventListener('mouseleave', startAutoplay);
-
-      startAutoplay();
     }); // requestAnimationFrame
   })
   .catch(err => console.error('Σφάλμα φόρτωσης layout:', err));
+
