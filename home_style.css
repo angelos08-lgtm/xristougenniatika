@@ -3,7 +3,7 @@
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+    background: url('https://www.dia-trofis.gr/wp-content/uploads/2017/12/Christmasy-home.jpg') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,5 +223,6 @@ main {
   .story-block p { font-size: 0.9em; }
   .slider, .story-slider { aspect-ratio: 4 / 3; }
 }
+
 
 
