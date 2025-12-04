@@ -105,7 +105,7 @@ li {
 }
 
 .slides-wrapper img {
-  width: 100%;
+  width: 1000px;
   display: block;
   border-radius: 12px;
   opacity: 0;
@@ -199,3 +199,4 @@ li {
     height: 220px;
   }
 }
+
