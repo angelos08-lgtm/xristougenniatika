@@ -13,66 +13,124 @@ fetch('partials/layout.html')
     requestAnimationFrame(() => {
       const main = document.getElementById('content');
       main.innerHTML = `
-  <article class="container" aria-labelledby="title">
     <header>
-      <h1 id="titlearticle">Κουραμπιέδες</h1>
-      <p class="lead">Παραδοσιακή συνταγή για αφράτους κουραμπιέδες — ιδανικοί για γιορτές.</p>
-      <div class="meta">Προετοιμασία: ~30 λεπτά • Ψήσιμο: 20-25 λεπτά • Μερίδες: περίπου 30</div>
+      <h1 id="titlearticle">Μαγικά Παιδικά Χριστούγεννα</h1>
+      <p class="lead">Ιστορίες, παιχνίδια και γλυκές αναμνήσεις για τα παιδιά</p>
     </header>
 
-    <section class="section" aria-labelledby="ingredients-heading">
-      <h2 id="ingredients-heading">Υλικά</h2>
-      <ul class="ingredients">
-        <li>300 γρ. βούτυρο αγελάδας σε θερμοκρασία δωματίου</li>
-        <li>150 γρ. ζάχαρη άχνη (για την ζύμη) + επιπλέον για πασπάλισμα</li>
-        <li>1 αυγό (προαιρετικά μόνο ο κρόκος)</li>
-        <li>100 γρ. αμύγδαλα ψημένα και χοντροκομμένα</li>
-        <li>600–700 γρ. αλεύρι για όλες τις χρήσεις (περίπου, ανάλογα την υγρασία)</li>
-        <li>1 κουτ. γλυκού μπέικιν πάουντερ</li>
-        <li>1 κουτ. γλυκού εκχύλισμα βανίλιας ή 1 φακελάκι</li>
-        <li>1-2 κουτ. σούπας κονιάκ ή λικέρ (προαιρετικά, δίνει άρωμα)</li>
-        <li>μια πρέζα αλάτι</li>
-        <li>ζάχαρη άχνη για πασπάλισμα (γενναιόδωρα)</li>
-        <li>προαιρετικά λίγες σταγόνες ανθόνερο ή ροδόνερο</li>
+    <!-- Hero Slider -->
+    <div class="slider" id="heroSlider">
+      <div class="slides-wrapper"></div>
+      <button class="prev">❮</button>
+      <button class="next">❯</button>
+      <div class="dots"></div>
+    </div>
+
+    <!-- Βιβλία / Παραμύθια -->
+    <section id="books">
+      <h2>Χριστουγεννιάτικες Ιστορίες για Παιδιά</h2>
+      <div class="book-list">
+        <div class="book">
+          <img src="https://images.unsplash.com/photo-1606229063562-07d72f54f986" alt="Παραμύθι 1">
+          <h3>Το Μικρό Έλατο</h3>
+          <p>Ένα μικρό έλατο θέλει να στολίσει τον κόσμο με φως και χαρά.</p>
+        </div>
+        <div class="book">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Παραμύθι 2">
+          <h3>Η Περιπέτεια του Άγιου Βασίλη</h3>
+          <p>Ακολούθησε τον Άγιο Βασίλη στο μαγικό του ταξίδι.</p>
+        </div>
+        <div class="book">
+          <img src="https://images.unsplash.com/photo-1544935455-c5e7f8aa4826" alt="Παραμύθι 3">
+          <h3>Οι Μικροί Κουραμπιέδες</h3>
+          <p>Γλυκιά ιστορία για μικρά χεράκια που αγαπούν τη μαγειρική.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIY / Δραστηριότητες -->
+    <section id="diy">
+      <h2>Δραστηριότητες & Χειροτεχνίες</h2>
+      <ul>
+        <li>Φτιάξε το δικό σου στολίδι από χαρτί και κορδέλες.</li>
+        <li>Ζωγράφισε την αγαπημένη σου χριστουγεννιάτικη σκηνή.</li>
+        <li>Μαγείρεψε μελομακάρονα ή κουραμπιέδες με τους γονείς σου.</li>
       </ul>
     </section>
 
-    <section class="section" aria-labelledby="method-heading">
-      <h2 id="method-heading">Εκτέλεση</h2>
-      <ol class="steps">
-        <li>Προθερμαίνεις τον φούρνο στους 170°C (αέρα) και στρώνεις τα ταψιά με λαδόκολλα.</li>
-        <li>Χτυπάς το βούτυρο με την ζάχαρη άχνη μέχρι να γίνει λασπώδες και αφράτο.</li>
-        <li>Προσθέτεις τον κρόκο (αν χρησιμοποιήσεις), τη βανίλια και το κονιάκ/ανθόνερο. Ανακατεύεις καλά.</li>
-        <li>Σε ένα μπολ κοσκινίζεις το αλεύρι με το μπέικιν και την πρέζα αλάτι. Ρίχνεις σταδιακά στο βούτυρο μέχρι να σχηματιστεί μαλακή ζύμη.</li>
-        <li>Προσθέτεις τα χοντροκομμένα αμύγδαλα και ζυμώνεις απαλά — η ζύμη δεν πρέπει να γίνει σκληρή.</li>
-        <li>Πλάθεις μικρές μπάλες ή σχήμα κουραμπιέ (μισοφέγγαρο) και τοποθετείς στο ταψί με απόσταση.</li>
-        <li>Ψήνεις 20–25 λεπτά μέχρι να πάρουν πολύ ελαφρύ χρυσαφί χρώμα (προσοχή να μην ροδίσουν πολύ).</li>
-        <li>Βγάζεις και αφήνεις ελαφρά να κρυώσουν (ζεστοί απορροφούν καλύτερα την άχνη). Πασπαλίζεις γενναιόδωρα με άχνη όταν είναι ακόμη χλιαροί.</li>
-      </ol>
-      <p class="note">Συμβουλή: Αποθηκεύονται σε καλά κλειστό δοχείο. Αν τους αφήσεις 1-2 μέρες, μαλακώνουν και γίνονται ακόμα πιο νόστιμοι.</p>
+    <!-- Σύντομες ιστορίες -->
+    <section id="stories">
+      <h2>Μικρές Χριστουγεννιάτικες Ιστορίες</h2>
+      <div class="story">
+        <h3>Η νύχτα των αστεριών</h3>
+        <p>Ένα παιδί κοιτάζει τα αστέρια και φαντάζεται τον κόσμο γεμάτο φως και χαρά.</p>
+      </div>
+      <div class="story">
+        <h3>Το δώρο της καρδιάς</h3>
+        <p>Μια ιστορία για ένα δώρο που δεν κοστίζει χρήματα αλλά κάνει μεγάλη χαρά.</p>
+      </div>
     </section>
-
-    <footer class="section">
-      <p class="note">Καλή επιτυχία — κι αν βαριέσαι, ζήτα από κάποιον να σε βοηθήσει στο πλάσιμο 😉</p>
-    </footer>
-  </article>
-
-<div class="video-wrapper">
-  <iframe 
-    src="https://www.youtube.com/embed/1k2d2nhSapQ" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allowfullscreen>
-  </iframe>
-</div>
-
-
-
       `;
+
+      // ===========================
+      // Hero Slider JS
+      // ===========================
+      const sliderImages = [
+        "https://images.unsplash.com/photo-1606229063562-07d72f54f986",
+        "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+        "https://images.unsplash.com/photo-1544935455-c5e7f8aa4826"
+      ];
+
+      const slider = document.getElementById('heroSlider');
+      const wrapper = slider.querySelector('.slides-wrapper');
+      const dotsContainer = slider.querySelector('.dots');
+      const prevBtn = slider.querySelector('.prev');
+      const nextBtn = slider.querySelector('.next');
+
+      let current = 0;
+      const slides = [];
+      const dots = [];
+      let autoplayInterval = null;
+      const AUTOPLAY_DELAY = 4000;
+
+      sliderImages.forEach((src, idx) => {
+        const img = document.createElement('img');
+        img.src = src;
+        if (idx === 0) img.classList.add('active');
+        wrapper.appendChild(img);
+        slides.push(img);
+
+        const dot = document.createElement('button');
+        if (idx === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goTo(idx));
+        dotsContainer.appendChild(dot);
+        dots.push(dot);
+      });
+
+      function setActive(idx) {
+        slides[current].classList.remove('active');
+        slides[idx].classList.add('active');
+        dots[current].classList.remove('active');
+        dots[idx].classList.add('active');
+        current = idx;
+      }
+
+      function nextSlide() { setActive((current + 1) % slides.length); }
+      function prevSlide() { setActive((current - 1 + slides.length) % slides.length); }
+      function goTo(idx) { setActive(idx); restartAutoplay(); }
+
+      function startAutoplay() { stopAutoplay(); autoplayInterval = setInterval(nextSlide, AUTOPLAY_DELAY); }
+      function stopAutoplay() { if (autoplayInterval) clearInterval(autoplayInterval); }
+      function restartAutoplay() { stopAutoplay(); startAutoplay(); }
+
+      nextBtn.addEventListener('click', () => { nextSlide(); restartAutoplay(); });
+      prevBtn.addEventListener('click', () => { prevSlide(); restartAutoplay(); });
+
+      slider.addEventListener('mouseenter', stopAutoplay);
+      slider.addEventListener('mouseleave', startAutoplay);
+
+      startAutoplay();
+
     }); // requestAnimationFrame
-  }); // fetch then
-
-
-
-
-
+  }) // fetch then
+  .catch(err => console.error('Σφάλμα φόρτωσης layout:', err));
