@@ -25,7 +25,7 @@ main#content {
 /* Header */
 #header1 {
 	position: relative;
-  background-color: #d47a22;
+  background-color: #8b0606;
   color: white;
   text-align: center;
   padding: 5px 0px;
@@ -39,7 +39,7 @@ header button {
   position: absolute;
   right: 20px;
   top: 20px;
-  background-color: #8b0606;
+  background-color: #d47a22;
   color: #fff;
   border: none;
   padding: 8px 12px;
@@ -59,7 +59,7 @@ header button:hover {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #bd6e21c7;
+  background-color: #930b0bc4;
   overflow-x: hidden;
   transition: width 0.4s ease, opacity 0.4s ease;
   padding-top: 60px;
@@ -142,6 +142,16 @@ header button:hover {
 }
 
 
+
+.submenu-title {
+  font-weight: bold;
+  padding: 8px 15px;
+  color: #c00;
+  font-size: 0.95rem;
+}
+
+
+
 /* Κουμπί υπομενού */
 .has-submenu .submenu-toggle {
   background: none;
@@ -169,6 +179,7 @@ header button:hover {
 .submenu-toggle.open::after {
   content: " ▲";
 }
+
 
 
 
