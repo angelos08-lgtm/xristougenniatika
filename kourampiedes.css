@@ -92,7 +92,7 @@ li {
    =============================== */
 .slider {
   position: relative;
-  width: 100%;
+  width: 1000px;
   overflow: hidden;
   border-radius: 12px;
   margin-bottom: 30px;
@@ -199,4 +199,5 @@ li {
     height: 220px;
   }
 }
+
 
