@@ -27,14 +27,22 @@ fetch('partials/layout.html')
     <div class="dots"></div>
   </div>
 
-  <div class="slider-text">
-    <h2>Χριστουγεννιάτικες Ιστορίες για Παιδιά</h2>
-    <p>Ανακάλυψε μαγικές ιστορίες που φέρνουν χαρά στα παιδιά και ζεσταίνουν τις καρδιές τους.</p>
-    <ul>
-      <li>Το Μικρό Έλατο</li>
-      <li>Η Περιπέτεια του Άγιου Βασίλη</li>
-      <li>Οι Μικροί Κουραμπιέδες</li>
-    </ul>
+<!-- 3 Κουτάκια Ιστοριών -->
+<div class="story-boxes">
+  <div class="story-box">
+    <img src="https://images.unsplash.com/photo-1606229063562-07d72f54f986" alt="Το Μικρό Έλατο">
+    <h3>Το Μικρό Έλατο</h3>
+    <p>Ένα μικρό έλατο θέλει να στολίσει τον κόσμο με φως και χαρά.</p>
+  </div>
+  <div class="story-box">
+    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Η Περιπέτεια του Άγιου Βασίλη">
+    <h3>Η Περιπέτεια του Άγιου Βασίλη</h3>
+    <p>Ακολούθησε τον Άγιο Βασίλη στο μαγικό του ταξίδι.</p>
+  </div>
+  <div class="story-box">
+    <img src="https://images.unsplash.com/photo-1544935455-c5e7f8aa4826" alt="Οι Μικροί Κουραμπιέδες">
+    <h3>Οι Μικροί Κουραμπιέδες</h3>
+    <p>Γλυκιά ιστορία για μικρά χεράκια που αγαπούν τη μαγειρική.</p>
   </div>
 </div>
 
@@ -123,3 +131,4 @@ fetch('partials/layout.html')
     }); // requestAnimationFrame
   })
   .catch(err => console.error('Σφάλμα φόρτωσης layout:', err));
+
