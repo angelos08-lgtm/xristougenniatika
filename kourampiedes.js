@@ -9,10 +9,10 @@ fetch('partials/layout.html')
     script.src = 'partials/layout_script.js';
     document.body.appendChild(script);
 
-    // Εισαγωγή περιεχομένου Επικοινωνίας στο <main id="content">
-requestAnimationFrame(() => {
-  const main = document.getElementById('content');
-  main.innerHTML = `
+    // Εισαγωγή περιεχομένου και slider JS
+    requestAnimationFrame(() => {
+      const main = document.getElementById('content');
+      main.innerHTML = `
 <header>
   <h1 id="titlearticle">Μαγικά Παιδικά Χριστούγεννα</h1>
   <p class="lead">Ιστορίες, παιχνίδια και γλυκές αναμνήσεις για τα παιδιά</p>
@@ -60,9 +60,7 @@ requestAnimationFrame(() => {
     <p>Μια ιστορία για ένα δώρο που δεν κοστίζει χρήματα αλλά κάνει μεγάλη χαρά.</p>
   </div>
 </section>
-  `;
-});
-
+      `;
 
       // ===========================
       // Hero Slider JS
@@ -122,8 +120,6 @@ requestAnimationFrame(() => {
       slider.addEventListener('mouseleave', startAutoplay);
 
       startAutoplay();
-
     }); // requestAnimationFrame
-  }) // fetch then
+  })
   .catch(err => console.error('Σφάλμα φόρτωσης layout:', err));
-
