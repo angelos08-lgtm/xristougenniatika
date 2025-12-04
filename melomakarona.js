@@ -9,64 +9,109 @@ fetch('partials/layout.html')
     script.src = 'partials/layout_script.js';
     document.body.appendChild(script);
 
-    // Εισαγωγή περιεχομένου Επικοινωνίας στο <main id="content">
+    // Εισαγωγή περιεχομένου στο <main id="content">
     requestAnimationFrame(() => {
       const main = document.getElementById('content');
       main.innerHTML = `
-<article class="container" aria-labelledby="title">
-  <header>
-    <h1 id="titlearticle">Μελομακάρονα</h1>
-    <p class="lead">Αρωματικά, ζουμερά μελομακάρονα με μέλι και καρύδι.</p>
-    <div class="meta">Προετοιμασία: ~30 λεπτά • Ψήσιμο: 20–25 λεπτά • Μερίδες: περίπου 40</div>
-  </header>
+<header>
+  <h1 id="titlearticle">Χριστουγεννιάτικα Έθιμα στην Ελλάδα</h1>
+  <p class="lead">Ανακαλύψτε τα πιο όμορφα και μαγικά χριστουγεννιάτικα έθιμα ανά την Ελλάδα</p>
+</header>
 
-  <section class="section" aria-labelledby="ingredients-heading">
-    <h2 id="ingredients-heading">Υλικά</h2>
-    <ul class="ingredients">
-      <li>1 φλ. ελαιόλαδο</li>
-      <li>1/2 φλ. σπορέλαιο</li>
-      <li>1/2 φλ. ζάχαρη</li>
-      <li>1/2 φλ. φρέσκο χυμό πορτοκαλιού</li>
-      <li>Ξύσμα από 1 πορτοκάλι</li>
-      <li>1/4 φλ. κονιάκ (ή άλλο αρωματικό λικέρ)</li>
-      <li>1 κουτ. γλυκού σόδα</li>
-      <li>1 κουτ. γλυκού κανέλα</li>
-      <li>1/2 κουτ. γλυκού γαρίφαλο</li>
-      <li>~900 γρ. αλεύρι για όλες τις χρήσεις</li>
-      <li>1 κουτ. γλυκού μπέικιν πάουντερ</li>
-      <li>Για το σιρόπι: 1 φλ. μέλι, 1 φλ. ζάχαρη, 1 φλ. νερό, 1 ξυλάκι κανέλας</li>
-      <li>Για το πασπάλισμα: καρύδι χοντροκομμένο</li>
-    </ul>
-  </section>
-
-  <section class="section" aria-labelledby="method-heading">
-    <h2 id="method-heading">Εκτέλεση</h2>
-    <ol class="steps">
-      <li>Προθερμαίνεις τον φούρνο στους 170°C και στρώνεις τα ταψιά με λαδόκολλα.</li>
-      <li>Σε μπολ ανακατεύεις ελαιόλαδο, σπορέλαιο, ζάχαρη, χυμό πορτοκαλιού, ξύσμα και κονιάκ.</li>
-      <li>Ρίχνεις τη σόδα και ανακατεύεις ώστε να αφρίσει μέσα στο μείγμα.</li>
-      <li>Κοσκινίζεις αλεύρι, μπέικιν, κανέλα και γαρίφαλο. Προσθέτεις σταδιακά μέχρι να σχηματιστεί εύπλαστη αλλά μαλακή ζύμη.</li>
-      <li>Πλάθεις μικρά οβάλ μελομακάρονα και τα πιέζεις ελαφρά με ένα πιρούνι να σχηματίσουν σχέδιο.</li>
-      <li>Ψήνεις 20–25 λεπτά μέχρι να ροδίσουν.</li>
-      <li>Βράζεις για 2–3 λεπτά το νερό με τη ζάχαρη και την κανέλα. Κλείνεις τη φωτιά και προσθέτεις το μέλι.</li>
-      <li>Βουτάς τα ζεστά μελομακάρονα στο χλιαρό σιρόπι για 5–10 δευτερόλεπτα το καθένα.</li>
-      <li>Τα τοποθετείς σε πιατέλα και τα πασπαλίζεις με καρύδι.</li>
-    </ol>
-    <p class="note">Μπορείς να τα κάνεις ακόμη πιο αρωματικά προσθέτοντας λίγο μέλι και στη ζύμη.</p>
-  </section>
-</article>
-
-     <div class="video-wrapper">
-  <iframe 
-    src="https://www.youtube.com/embed/I2iYWTkHx5I?si=EvtFmwgReZiITbYp" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allowfullscreen>
-  </iframe>
+<!-- Hero Slider -->
+<div class="hero-container">
+  <div class="slider" id="heroSlider">
+    <div class="slides-wrapper"></div>
+    <button class="prev">❮</button>
+    <button class="next">❯</button>
+    <div class="dots"></div>
+  </div>
 </div>
+
+<!-- 3 Κουτάκια Χριστουγεννιάτικων Εθίμων -->
+<div class="story-boxes">
+  <div class="story-box">
+    <img src="https://images.unsplash.com/photo-1606229063562-07d72f54f986" alt="Στολισμός Δέντρου">
+    <h3>Στολισμός Χριστουγεννιάτικου Δέντρου</h3>
+    <p>Παραδοσιακό έθιμο όπου οι οικογένειες στολίζουν δέντρα με φωτάκια και στολίδια.</p>
+  </div>
+  <div class="story-box">
+    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Κάλαντα">
+    <h3>Κάλαντα</h3>
+    <p>Τα παιδιά πηγαίνουν από σπίτι σε σπίτι τραγουδώντας κάλαντα και παίρνοντας λιχουδιές.</p>
+  </div>
+  <div class="story-box">
+    <img src="https://images.unsplash.com/photo-1544935455-c5e7f8aa4826" alt="Παραδοσιακά Γλυκά">
+    <h3>Παραδοσιακά Γλυκά</h3>
+    <p>Μαγείρεμα μελομακάρονων, κουραμπιέδων και άλλων γλυκών που γεμίζουν τα σπίτια με άρωμα Χριστουγέννων.</p>
+  </div>
+</div>
+
+<!-- Κείμενο Περιγραφής -->
+<section id="customs-info">
+  <h2>Παραδοσιακά Χριστουγεννιάτικα Έθιμα</h2>
+  <p>Η Ελλάδα είναι γεμάτη μαγικά έθιμα κατά την περίοδο των Χριστουγέννων. Από τα φωτάκια στα δέντρα και τα κάλαντα μέχρι τα παραδοσιακά γλυκά, κάθε γωνιά της χώρας γιορτάζει με χρώμα, χαρά και ζεστασιά.</p>
+</section>
       `;
+
+      // ===========================
+      // Hero Slider JS
+      // ===========================
+      const sliderImages = [
+        "https://images.unsplash.com/photo-1606229063562-07d72f54f986",
+        "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+        "https://images.unsplash.com/photo-1544935455-c5e7f8aa4826"
+      ];
+
+      const slider = document.getElementById('heroSlider');
+      const wrapper = slider.querySelector('.slides-wrapper');
+      const dotsContainer = slider.querySelector('.dots');
+      const prevBtn = slider.querySelector('.prev');
+      const nextBtn = slider.querySelector('.next');
+
+      let current = 0;
+      const slides = [];
+      const dots = [];
+      let autoplayInterval = null;
+      const AUTOPLAY_DELAY = 4000;
+
+      sliderImages.forEach((src, idx) => {
+        const img = document.createElement('img');
+        img.src = src;
+        if (idx === 0) img.classList.add('active');
+        wrapper.appendChild(img);
+        slides.push(img);
+
+        const dot = document.createElement('button');
+        if (idx === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goTo(idx));
+        dotsContainer.appendChild(dot);
+        dots.push(dot);
+      });
+
+      function setActive(idx) {
+        slides[current].classList.remove('active');
+        slides[idx].classList.add('active');
+        dots[current].classList.remove('active');
+        dots[idx].classList.add('active');
+        current = idx;
+      }
+
+      function nextSlide() { setActive((current + 1) % slides.length); }
+      function prevSlide() { setActive((current - 1 + slides.length) % slides.length); }
+      function goTo(idx) { setActive(idx); restartAutoplay(); }
+
+      function startAutoplay() { stopAutoplay(); autoplayInterval = setInterval(nextSlide, AUTOPLAY_DELAY); }
+      function stopAutoplay() { if (autoplayInterval) clearInterval(autoplayInterval); }
+      function restartAutoplay() { stopAutoplay(); startAutoplay(); }
+
+      nextBtn.addEventListener('click', () => { nextSlide(); restartAutoplay(); });
+      prevBtn.addEventListener('click', () => { prevSlide(); restartAutoplay(); });
+
+      slider.addEventListener('mouseenter', stopAutoplay);
+      slider.addEventListener('mouseleave', startAutoplay);
+
+      startAutoplay();
     }); // requestAnimationFrame
-  }); // fetch then
-
-
-
+  })
+  .catch(err => console.error('Σφάλμα φόρτωσης layout:', err));
