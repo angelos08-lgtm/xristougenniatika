@@ -3,19 +3,24 @@ const numberOfFlakes = 50; // σύνολο αντικειμένων
 
 // Ορίζουμε 4 διαφορετικά αντικείμενα/σχήματα
 const types = [
-  '❄',                         // χιονονιφάδα
-  '★',                         // αστέρι
-  '☃',                         // χιονάνθρωπος
-  '<img src="images/santa.png" style="width:20px;">' // μικρό καπέλο Άγιου Βασίλη
+  { symbol: '❄', className: 'flake-snow' },
+  { symbol: '★', className: 'flake-star' },
+  { symbol: '☃', className: 'flake-snowman' },
+  { symbol: '<img src="images/santa.png" style="width:20px;">', className: 'flake-santa' }
 ];
+
+const numberOfFlakes = 50;
 
 for (let i = 0; i < numberOfFlakes; i++) {
   const flake = document.createElement('div');
   flake.classList.add('snowflake');
 
-  // Επιλέγει τυχαία ένα από τα 4 είδη
+  // Επιλογή τυχαίου τύπου
   const randomType = types[Math.floor(Math.random() * types.length)];
-  flake.innerHTML = randomType;
+  flake.innerHTML = randomType.symbol;
+
+  // Προσθήκη επιπλέον class για στυλ
+  flake.classList.add(randomType.className);
 
   flake.style.left = Math.random() * 100 + 'vw';
   flake.style.fontSize = 10 + Math.random() * 20 + 'px';
@@ -24,6 +29,7 @@ for (let i = 0; i < numberOfFlakes; i++) {
 
   snowContainer.appendChild(flake);
 }
+
 
 
 
@@ -76,6 +82,7 @@ document.querySelectorAll(".submenu-toggle").forEach(btn => {
     btn.textContent = baseText + (submenu.classList.contains("open") ? " ▲" : " ▼");
   });
 });
+
 
 
 
