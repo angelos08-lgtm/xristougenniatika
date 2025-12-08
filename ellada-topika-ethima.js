@@ -34,7 +34,7 @@ fetch('partials/layout.html')
                 Στη Θράκη, τα παιδιά γυρίζουν στα σπίτια με κλαρίνα και παραδοσιακά όργανα. 
                 Η μουσική συνοδεύεται από χορούς και ευχές για καλή χρονιά.
               </p>
-              <img src="images/ethima/thraki.jpg" class="ethima_gr_image" data-full="images/ethima/thraki.jpg">
+              <img src="https://www.nextdeal.gr/sites/default/files/styles/article_single_940x565/public/article_images/10fee2da120299ebc9b6a436195e0fbd.jpg?itok=bbclQ1aag" class="ethima_gr_image" data-full="https://www.nextdeal.gr/sites/default/files/styles/article_single_940x565/public/article_images/10fee2da120299ebc9b6a436195e0fbd.jpg?itok=bbclQ1aa">
             </div>
           </div>
 
@@ -148,3 +148,4 @@ fetch('partials/layout.html')
     });
   })
   .catch(err => console.error('Σφάλμα φόρτωσης layout:', err));
+
