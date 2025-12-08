@@ -22,7 +22,6 @@ html, body {
 .snowflake {
   position: absolute;
   top: -10px;
-  color: white;
   font-size: 1em; /* μέγεθος νιφάδας, μπορεί να τυχαίο */
   user-select: none;
   pointer-events: none;
@@ -31,6 +30,25 @@ html, body {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+
+
+.flake-snow {
+  color: white;
+}
+
+.flake-star {
+  color: gold;
+}
+
+.flake-snowman {
+  color: lightblue;
+}
+
+.flake-santa img {
+  /* αν είναι εικόνα, το χρώμα καθορίζεται από την εικόνα */
+  width: 20px;
+}
+
 
 @keyframes fall {
   0% {
@@ -219,6 +237,7 @@ header button:hover {
 .submenu-toggle.open::after {
   content: " ▲";
 }
+
 
 
 
