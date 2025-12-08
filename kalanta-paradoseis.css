@@ -1,6 +1,6 @@
 /* ===== HERO ===== */
 #kalanta_gr_hero {
-  background: url('../images/bg/music-notes-bg.jpg') center/cover fixed;
+  background: url('https://www.pontosnews.gr/wp-content/uploads/2021/12/kalanta-pontoy-amperidoy-sofia-750x598.jpg') center/cover fixed;
   padding: 120px 20px;
   color: white;
   text-align: center;
@@ -128,3 +128,4 @@
   from {opacity: 0; transform: translateY(15px);}
   to {opacity: 1; transform: translateY(0);}
 }
+
