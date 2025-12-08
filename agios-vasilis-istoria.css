@@ -1,6 +1,6 @@
 /* ===== HERO ===== */
 #santa_hero {
-  background: url('../images/bg/santa-bg.jpg') center/cover fixed;
+  background: url('https://www.candiadoc.gr/wp-content/uploads/2014/12/agios-vasilis.jpg') center/cover fixed;
   padding: 120px 20px;
   color: white;
   text-align: center;
@@ -107,3 +107,4 @@
   from {opacity: 0; transform: translateY(15px);}
   to {opacity: 1; transform: translateY(0);}
 }
+
