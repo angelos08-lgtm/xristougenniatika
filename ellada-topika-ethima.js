@@ -64,7 +64,7 @@ fetch('partials/layout.html')
                 Η παραδοσιακή βασιλόπιτα της Ηπείρου έχει ιδιαίτερη σημασία, 
                 με συμβολισμούς που συνδέονται με την οικογένεια και την τύχη.
               </p>
-              <img src="images/ethima/epirus.jpg" class="ethima_gr_image" data-full="images/ethima/epirus.jpg">
+              <img src="https://epirusgate.gr/wp-content/uploads/2023/02/%CE%9D%CE%A5%CE%A1%CE%95%CE%9C%CE%92%CE%A1%CE%95%CE%A1%CE%93%CE%97-%CE%A7%CE%9F%CE%A1%CE%9F%CE%A3-3-scaled.jpg" class="ethima_gr_image" data-full="https://epirusgate.gr/wp-content/uploads/2023/02/%CE%9D%CE%A5%CE%A1%CE%95%CE%9C%CE%92%CE%A1%CE%95%CE%A1%CE%93%CE%97-%CE%A7%CE%9F%CE%A1%CE%9F%CE%A3-3-scaled.jpg">
             </div>
           </div>
 
@@ -79,7 +79,7 @@ fetch('partials/layout.html')
                 Παιδιά και νέοι φτιάχνουν αυτοσχέδιες φιγούρες καμήλας και γυρίζουν 
                 τις γειτονιές, δημιουργώντας μια μοναδική γιορτινή ατμόσφαιρα.
               </p>
-              <img src="images/ethima/crete.jpg" class="ethima_gr_image" data-full="images/ethima/crete.jpg">
+              <img src="https://sportsaddict.gr/wp-content/uploads/2017/02/ethimo-kamila-feres.jpg" class="ethima_gr_image" data-full="https://sportsaddict.gr/wp-content/uploads/2017/02/ethimo-kamila-feres.jpg">
             </div>
           </div>
 
@@ -94,7 +94,7 @@ fetch('partials/layout.html')
                 Στα νησιά του Αιγαίου κυριαρχεί το έθιμο του καραβιού. 
                 Οι κάτοικοι φτιάχνουν μικρά ξύλινα καράβια που στολίζονται με φώτα και κορδέλες.
               </p>
-              <img src="images/ethima/islands.jpg" class="ethima_gr_image" data-full="images/ethima/islands.jpg">
+              <img src="https://storage.googleapis.com/letsferry-public/assets/images/content/105_image.jpg" class="ethima_gr_image" data-full="https://storage.googleapis.com/letsferry-public/assets/images/content/105_image.jpg">
             </div>
           </div>
 
@@ -148,5 +148,6 @@ fetch('partials/layout.html')
     });
   })
   .catch(err => console.error('Σφάλμα φόρτωσης layout:', err));
+
 
 
