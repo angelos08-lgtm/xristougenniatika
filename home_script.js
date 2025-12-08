@@ -4,7 +4,7 @@ const splashHTML = `
     position: fixed;
     top:0; left:0;
     width:100%; height:100%;
-    background: url('https://images.unsplash.com/photo-1605859676666-8b12280a63a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-4.0.3&q=80&w=1080') center/cover no-repeat;
+    background: url('https://images.ctfassets.net/hrltx12pl8hq/JdxgoNHHSieq2fIgsCTB1/e5a28be014257ce1b1c0f758ccba3c94/christmas-images.jpg?fit=fill&w=600&h=400') center/cover no-repeat;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -330,6 +330,7 @@ initSliderById('mainSlider', [
     "εικόνα3_δίπλα.jpg"
   ]);
 }
+
 
 
 
