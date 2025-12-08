@@ -1,4 +1,6 @@
-    <div id="splash" style="
+// -------------------- Splash Screen -------------------- //
+const splashHTML = `
+  <div id="splash" style="
     position: fixed;
     top:0; left:0;
     width:100%; height:100%;
@@ -25,8 +27,7 @@
       transition: all 0.3s ease;
     ">Είσοδος</button>
   </div>
-
-  <script>
+`;
 document.body.insertAdjacentHTML('afterbegin', splashHTML);
 
 // Απόκρυψη περιεχομένου έως ότου κλείσει το splash
@@ -329,6 +330,7 @@ initSliderById('mainSlider', [
     "εικόνα3_δίπλα.jpg"
   ]);
 }
+
 
 
 
