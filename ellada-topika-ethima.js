@@ -49,7 +49,7 @@ fetch('partials/layout.html')
                 Νεαροί ανάβουν μεγάλες φωτιές τα Χριστούγεννα. Γύρω από τις φωτιές τραγουδούν 
                 και μοιράζονται τοπικά γλυκά. Ένα από τα πιο εντυπωσιακά έθιμα της Βόρειας Ελλάδας.
               </p>
-              <img src="images/ethima/macedonia.jpg" class="ethima_gr_image" data-full="images/ethima/macedonia.jpg">
+              <img src="https://images.squarespace-cdn.com/content/v1/5a18683b64b05f9f4adeb4c7/1608587163971-NQ60TIAUM317PWN1HSW0/Serbian-Yule-Log-59936127af5d3a0011660f47.jpg" class="ethima_gr_image" data-full="https://images.squarespace-cdn.com/content/v1/5a18683b64b05f9f4adeb4c7/1608587163971-NQ60TIAUM317PWN1HSW0/Serbian-Yule-Log-59936127af5d3a0011660f47.jpg">
             </div>
           </div>
 
@@ -148,4 +148,5 @@ fetch('partials/layout.html')
     });
   })
   .catch(err => console.error('Σφάλμα φόρτωσης layout:', err));
+
 
