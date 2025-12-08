@@ -1,6 +1,6 @@
 /* ===== HERO SECTION ===== */
 #ethima_gr_hero {
-  background: url('../images/bg/christmas-bg.jpg') center/cover fixed;
+  background: url('https://omilo.com/wp-content/uploads/2016/12/omilo-blog-christmas-001-1.jpg') center/cover fixed;
   padding: 120px 20px;
   text-align: center;
   color: white;
@@ -121,3 +121,4 @@
   from {opacity: 0; transform: translateY(20px);}
   to {opacity: 1; transform: translateY(0);}
 }
+
