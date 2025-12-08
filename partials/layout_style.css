@@ -8,6 +8,43 @@ html, body {
   background-color: #f4f4f4;
 }
 
+#snow_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* για να μην εμποδίζει clicks */
+  z-index: 9999; 
+  overflow: hidden;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: white;
+  font-size: 1em; /* μέγεθος νιφάδας, μπορεί να τυχαίο */
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.8;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+
+
+
+
 /* Το main μεγαλώνει για να γεμίσει τον χώρο */
 main#content {
   flex: 1;
@@ -182,6 +219,7 @@ header button:hover {
 .submenu-toggle.open::after {
   content: " ▲";
 }
+
 
 
 
