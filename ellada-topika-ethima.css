@@ -1,77 +1,123 @@
-/* Βασικό styling */
-#christmas_section {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 30px;
-  background: linear-gradient(135deg, #fff7f0 0%, #ffe6cc 100%);
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
-
-/* Τίτλος & εισαγωγή */
-#christmas_title {
+/* ===== HERO SECTION ===== */
+#ethima_gr_hero {
+  background: url('../images/bg/christmas-bg.jpg') center/cover fixed;
+  padding: 120px 20px;
   text-align: center;
-  font-size: 2.5rem;
-  color: #c70000;
-  margin-bottom: 15px;
+  color: white;
+  text-shadow: 0 0 10px #0007;
+  animation: fadeIn 1.5s ease;
 }
 
-#christmas_intro {
-  font-size: 1.15rem;
-  color: #333;
-  text-align: justify;
-  margin-bottom: 40px;
+#ethima_gr_title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
 }
 
-/* Κάρτες εθίμων */
-.custom_card {
-  background-color: #fff3e6;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  border-left: 5px solid #c70000;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+#ethima_gr_subtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
 }
 
-.custom_card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+/* ===== CARDS ===== */
+#ethima_gr_customs_container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+  animation: fadeInUp 1.2s ease;
 }
 
-.custom_header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
+.ethima_gr_card {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 1px solid #ffffff50;
+  box-shadow: 0 8px 20px #0003;
+  transition: 0.3s ease;
   cursor: pointer;
 }
 
-.custom_header h2 {
-  font-size: 1.6rem;
-  color: #d94f00;
+.ethima_gr_card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px #0004;
 }
 
-.toggle_btn {
-  font-size: 1.4rem;
-  transition: transform 0.3s ease;
+.ethima_gr_card_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.custom_body {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #444;
-  padding: 0 20px;
+.ethima_gr_card_title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #b30000;
+}
+
+.ethima_gr_toggle {
+  font-size: 1.8rem;
+  color: #222;
+}
+
+.ethima_gr_card_body {
   overflow: hidden;
+  max-height: 0px;
+  transition: max-height 0.5s ease;
 }
 
-/* Responsive */
-@media (max-width: 768px){
-  #christmas_section {
-    padding: 20px;
-  }
+.ethima_gr_card_body p {
+  margin: 15px 0;
+}
 
-  .custom_header h2 {
-    font-size: 1.3rem;
-  }
+.ethima_gr_image {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 10px;
+  box-shadow: 0 5px 15px #0004;
+  transition: 0.3s ease;
+}
+
+.ethima_gr_image:hover {
+  transform: scale(1.03);
+}
+
+/* ===== LIGHTBOX ===== */
+#ethima_gr_lightbox {
+  position: fixed;
+  display: none;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #000c;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+}
+
+#ethima_gr_lightbox_img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #fff;
+}
+
+#ethima_gr_lightbox_close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
 }
