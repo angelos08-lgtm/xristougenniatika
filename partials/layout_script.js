@@ -9,8 +9,6 @@ const types = [
   { symbol: '<img src="images/santa.png" style="width:20px;">', className: 'flake-santa' }
 ];
 
-const numberOfFlakes = 50;
-
 for (let i = 0; i < numberOfFlakes; i++) {
   const flake = document.createElement('div');
   flake.classList.add('snowflake');
@@ -29,6 +27,7 @@ for (let i = 0; i < numberOfFlakes; i++) {
 
   snowContainer.appendChild(flake);
 }
+
 
 
 
@@ -82,6 +81,7 @@ document.querySelectorAll(".submenu-toggle").forEach(btn => {
     btn.textContent = baseText + (submenu.classList.contains("open") ? " ▲" : " ▼");
   });
 });
+
 
 
 
