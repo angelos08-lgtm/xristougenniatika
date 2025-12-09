@@ -35,38 +35,77 @@ fetch('partials/layout.html')
 
         <!-- Grid Δώρων -->
         <div class="gift-grid">
-          <div class="gift-card" data-age="3">
-            <div class="icon bounce">🧸</div>
-            <h3>Λούτρινα</h3>
-            <button class="info-btn">Περισσότερα</button>
-            <div class="expand-box">
-              <h4>Χριστουγεννιάτικα Λούτρινα</h4>
-              <p>Τάρανδοι, χιονάνθρωποι, αρκουδάκια...</p>
-            </div>
-          </div>
+       <!-- ΛΟΥΤΡΙΝΑ -->
+    <div class="gift-card" data-age="3">
+      <div class="icon bounce">🧸</div>
+      <h3>Λούτρινα</h3>
+      <button class="info-btn">Περισσότερα</button>
 
-          <div class="gift-card" data-age="6">
-            <div class="icon bounce">🎨</div>
-            <h3>Καλλιτεχνικά</h3>
-            <button class="info-btn">Περισσότερα</button>
-            <div class="expand-box">
-              <h4>Δημιουργικά Σετ</h4>
-              <p>Χρώματα, πλαστελίνες, ξυλομπογιές...</p>
-            </div>
-          </div>
-
-          <div class="gift-card" data-age="10">
-            <div class="icon bounce">🎮</div>
-            <h3>Ηλεκτρονικά</h3>
-            <button class="info-btn">Περισσότερα</button>
-            <div class="expand-box">
-              <h4>Gaming & Gadgets</h4>
-              <p>Κονσόλες, mini games, διαδραστικά παιχνίδια.</p>
-            </div>
-          </div>
+      <div class="expand-box">
+        <h4>Χριστουγεννιάτικα Λούτρινα</h4>
+        <p>Τάρανδοι, χιονάνθρωποι, αρκουδάκια και πολλά ακόμα!</p>
+        <div class="expand-images">
+          <img src="https://placehold.co/150x150?text=Reindeer">
+          <img src="https://placehold.co/150x150?text=Snowman">
+          <img src="https://placehold.co/150x150?text=Teddy">
         </div>
-<br>
       </div>
+    </div>
+
+    <!-- ΚΑΛΛΙΤΕΧΝΙΚΑ -->
+    <div class="gift-card" data-age="6">
+      <div class="icon bounce">🎨</div>
+      <h3>Καλλιτεχνικά</h3>
+      <button class="info-btn">Περισσότερα</button>
+
+      <div class="expand-box">
+        <h4>Δημιουργικά Σετ</h4>
+        <p>Χρώματα, πλαστελίνες, χάντρες, ξυλομπογιές.</p>
+        <div class="expand-images">
+          <img src="https://placehold.co/150x150?text=Paint">
+          <img src="https://placehold.co/150x150?text=Clay">
+          <img src="https://placehold.co/150x150?text=Crafts">
+        </div>
+      </div>
+    </div>
+
+    <!-- ΗΛΕΚΤΡΟΝΙΚΑ -->
+    <div class="gift-card" data-age="10">
+      <div class="icon bounce">🎮</div>
+      <h3>Ηλεκτρονικά Παιχνίδια</h3>
+      <button class="info-btn">Περισσότερα</button>
+
+      <div class="expand-box">
+        <h4>Gaming & Gadgets</h4>
+        <p>Κονσόλες, mini games, διαδραστικά παιχνίδια.</p>
+        <div class="expand-images">
+          <img src="https://placehold.co/150x150?text=Console">
+          <img src="https://placehold.co/150x150?text=Controller">
+          <img src="https://placehold.co/150x150?text=Headset">
+        </div>
+      </div>
+    </div>
+
+    <!-- ΠΑΖΛ -->
+    <div class="gift-card" data-age="6">
+      <div class="icon bounce">🧩</div>
+      <h3>Παζλ & Γρίφοι</h3>
+      <button class="info-btn">Περισσότερα</button>
+
+      <div class="expand-box">
+        <h4>Εκπαιδευτικά Παζλ</h4>
+        <p>Βελτιώνουν λογική, παρατήρηση και συγκέντρωση.</p>
+        <div class="expand-images">
+          <img src="https://placehold.co/150x150?text=Puzzle1">
+          <img src="https://placehold.co/150x150?text=Puzzle2">
+          <img src="https://placehold.co/150x150?text=Puzzle3">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
       <!-- ΤΡΕΝΟ -->
 <div id="train">🚂💨💨💨</div><br>
     `;
@@ -114,6 +153,7 @@ fetch('partials/layout.html')
 
   })
   .catch(err => console.error('Σφάλμα φόρτωσης layout:', err));
+
 
 
 
