@@ -1,8 +1,13 @@
-// Φόρτωση layout
+// Φόρτωση του layout
 fetch('partials/layout.html')
   .then(res => res.text())
   .then(html => {
     document.getElementById('layout1').innerHTML = html;
+
+    // Φόρτωση layout_script.js
+    const script = document.createElement('script');
+    script.src = 'partials/layout_script.js';
+    document.body.appendChild(script);
 
     // Φόρτωση του περιεχομένου
     const content = document.getElementById('content');
@@ -107,3 +112,4 @@ fetch('partials/layout.html')
 
   })
   .catch(err => console.error('Σφάλμα φόρτωσης layout:', err));
+
