@@ -67,6 +67,8 @@ fetch('partials/layout.html')
         </div>
 
       </div>
+      <!-- ΤΡΕΝΟ -->
+<div id="train">🚂💨💨💨</div>
     `;
 
     // ===== JS Λειτουργίες =====
@@ -112,4 +114,5 @@ fetch('partials/layout.html')
 
   })
   .catch(err => console.error('Σφάλμα φόρτωσης layout:', err));
+
 
