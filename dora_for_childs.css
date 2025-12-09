@@ -1,0 +1,169 @@
+  /* ===== BACKGROUND ===== */
+  body {
+    background: url("https://m.media-amazon.com/images/S/aplus-media-library-service-media/de33b967-03cc-4dbe-a14f-3159786b040e.__CR0,0,970,600_PT0_SX970_V1___.jpg") center/cover fixed no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ====== Kids Gifts ====== */
+  #kids-gifts {
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* ΦΙΛΤΡΑ ΗΛΙΚΙΑΣ */
+  .age-filters {
+    margin-bottom: 25px;
+  }
+
+  .age-filters button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    background: #ff4f75;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .age-filters button.active,
+  .age-filters button:hover {
+    background: #ff2f58;
+  }
+
+  /* ===== CAROUSEL ===== */
+  .carousel {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px #0003;
+    background: #fff;
+  }
+
+  .slides {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    min-width: 100%;
+  }
+
+  .slide img {
+    width: 100%;
+    display: block;
+  }
+
+  .carousel button.prev,
+  .carousel button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: #ffffffaa;
+    padding: 10px 15px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .carousel .prev { left: 10px; }
+  .carousel .next { right: 10px; }
+
+  /* ===== GRID ===== */
+  .gift-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 20px;
+  }
+
+  .gift-card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px #0003;
+    transition: transform 0.3s;
+  }
+
+  .gift-card:hover {
+    transform: scale(1.05);
+  }
+
+  /* ICON ANIMATION */
+  .icon { font-size: 60px; }
+
+  .bounce {
+    animation: bounce 1.2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  /* Περισσότερα */
+  .info-btn {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background: #ff4f75;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  /* ===== EXPANDABLE BOX ===== */
+  .expand-box {
+    margin-top: 15px;
+    padding: 15px;
+    background: #fff5f7;
+    border-radius: 15px;
+    box-shadow: 0 3px 8px #0002;
+    display: none;
+    animation: expand 0.4s ease;
+  }
+
+  .expand-box.visible {
+    display: block;
+  }
+
+  @keyframes expand {
+    from { opacity: 0; transform: scale(0.9); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  .expand-images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .expand-images img {
+    border-radius: 10px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+  }
+
+  /* ===== TRAIN ANIMATION ===== */
+  #train {
+    position: fixed;
+    bottom: 10px;
+    right: -300px;
+    font-size: 40px;
+    animation: trainMove 12s linear infinite;
+    white-space: nowrap;
+    z-index: 9999;
+  }
+
+  @keyframes trainMove {
+    0% { right: -300px; }
+    100% { right: 110%; }
+  }
