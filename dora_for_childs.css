@@ -6,6 +6,32 @@
     padding: 0;
   }
 
+@keyframes christmasColors {
+  0%   { background: #d50000; }   /* βαθύ κόκκινο */
+  10%  { background: #ff1744; }   /* φωτεινό κόκκινο */
+  20%  { background: #00c853; }   /* πράσινο */
+  30%  { background: #64dd17; }   /* ανοιχτό πράσινο */
+  40%  { background: #ffd600; }   /* χρυσό */
+  50%  { background: #ffea00; }   /* ανοιχτό χρυσό */
+  60%  { background: #ffffff; }   /* λευκό */
+  70%  { background: #d50000; }   /* ξανά κόκκινο */
+  80%  { background: #00c853; }   /* πράσινο */
+  90%  { background: #ffd600; }   /* χρυσό */
+  100% { background: #d50000; }   /* τελικό κόκκινο */
+}
+
+header {
+  padding: 25px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  animation: christmasColors 12s infinite linear;
+  transition: background 0.5s;
+}
+
+
+
   /* ====== Kids Gifts ====== */
   #kids-gifts {
     padding: 20px;
@@ -167,3 +193,4 @@
     0% { right: -300px; }
     100% { right: 110%; }
   }
+
