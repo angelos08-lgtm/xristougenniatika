@@ -6,18 +6,16 @@
     padding: 0;
   }
 
+/* ===== Χριστουγεννιάτικα χρώματα, πιο σκούρα και πλούσια ===== */
 @keyframes christmasColors {
-  0%   { background: #d50000; }   /* βαθύ κόκκινο */
-  10%  { background: #ff1744; }   /* φωτεινό κόκκινο */
-  20%  { background: #00c853; }   /* πράσινο */
-  30%  { background: #64dd17; }   /* ανοιχτό πράσινο */
-  40%  { background: #ffd600; }   /* χρυσό */
-  50%  { background: #ffea00; }   /* ανοιχτό χρυσό */
-  60%  { background: #ffffff; }   /* λευκό */
-  70%  { background: #d50000; }   /* ξανά κόκκινο */
-  80%  { background: #00c853; }   /* πράσινο */
-  90%  { background: #ffd600; }   /* χρυσό */
-  100% { background: #d50000; }   /* τελικό κόκκινο */
+  0%   { background: #8b0000; }   /* Σκούρο κόκκινο */
+  15%  { background: #006400; transform: translateX(-100%); } /* Σκούρο πράσινο, slide από αριστερά */
+  30%  { background: #b8860b; transform: translateX(0); } /* Σκούρο χρυσό, κεντρικό */
+  45%  { background: #800000; transform: translateX(100%); } /* Σκούρο μπορντό, slide από δεξιά */
+  60%  { background: #013220; transform: translateX(0); } /* Σκούρο πράσινο με άλλη απόχρωση */
+  75%  { background: #b45f06; transform: translateX(-50%); } /* Κοκκινωπό χρυσό, slide αριστερά */
+  90%  { background: #4b0000; transform: translateX(0); } /* Σκούρο κόκκινο */
+  100% { background: #8b0000; transform: translateX(0); } /* Τελικό αρχικό χρώμα */
 }
 
 header {
@@ -26,9 +24,11 @@ header {
   color: #fff;
   font-size: 1.5em;
   font-weight: bold;
-  animation: christmasColors 12s infinite linear;
-  transition: background 0.5s;
+  overflow: hidden;
+  animation: christmasColors 14s infinite ease-in-out;
+  transition: background 0.5s, transform 0.5s;
 }
+
 
 
 
@@ -193,4 +193,5 @@ header {
     0% { right: -300px; }
     100% { right: 110%; }
   }
+
 
