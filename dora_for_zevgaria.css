@@ -1,0 +1,174 @@
+/* ===== BACKGROUND ===== */
+body {
+  background: url("https://m.media-amazon.com/images/S/aplus-media-library-service-media/de33b967-03cc-4dbe-a14f-3159786b040e.__CR0,0,970,600_PT0_SX970_V1___.jpg") center/cover fixed no-repeat;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+/* ====== Couples Gifts Container ====== */
+#couples-gifts {
+  padding: 30px;
+  text-align: center;
+}
+
+/* ====== Filters ====== */
+.age-filters {
+  margin-bottom: 30px;
+}
+
+.age-filters button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: 1px solid #444;
+  background: rgba(255,255,255,0.85);
+  color: #333;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.age-filters button.active,
+.age-filters button:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* ===== CAROUSEL ===== */
+.carousel {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  background: #fff;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+  border-radius: 15px;
+}
+
+.carousel button.prev,
+.carousel button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel .prev { left: 10px; }
+.carousel .next { right: 10px; }
+
+/* ===== GRID ===== */
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 25px;
+}
+
+.gift-card {
+  background: rgba(255,255,255,0.95);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gift-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.gift-card h3 {
+  margin-top: 0;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+/* ===== Info Button ===== */
+.info-btn {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: none;
+  background: #444;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.info-btn:hover {
+  background: #222;
+}
+
+/* ===== EXPANDABLE BOX ===== */
+.expand-box {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 12px;
+  display: none;
+  animation: expand 0.3s ease;
+}
+
+.expand-box.visible {
+  display: block;
+}
+
+@keyframes expand {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.expand-images {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.expand-images img {
+  border-radius: 8px;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* ===== TRAIN ANIMATION ===== */
+#train {
+  position: fixed;
+  bottom: 10px;
+  right: -300px;
+  font-size: 40px;
+  animation: trainMove 12s linear infinite;
+  white-space: nowrap;
+  z-index: 9999;
+}
+
+@keyframes trainMove {
+  0% { right: -300px; }
+  100% { right: 110%; }
+}
