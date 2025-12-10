@@ -27,7 +27,7 @@ fetch('partials/layout.html')
           <div class="slides">
             <div class="slide"><img src="https://www.haritidis.gr/blog/wp-content/uploads/2018/12/Christmas-gifts-for-kids.jpg"></div>
             <div class="slide"><img src="https://i0.wp.com/citycampus.gr/wp-content/uploads/2020/12/Style-My-Day-%CE%A7%CF%81%CE%B9%CF%83%CF%84%CE%BF%CF%8D%CE%B3%CE%B5%CE%BD%CE%BD%CE%B1...-%CE%99%CE%B4%CE%AD%CE%B5%CF%82-%CE%B3%CE%B9%CE%B1-%CE%B4%CF%8E%CF%81%CE%B1-%CE%B3%CE%B9%CE%B1-%CE%B3%CF%85%CE%BD%CE%B1%CE%AF%CE%BA%CE%B5%CF%82-%CE%BA%CE%B9-%CE%AC%CE%BD%CE%B4%CF%81%CE%B5%CF%82-1.jpg?fit=605%2C410&ssl=1"></div>
-            <div class="slide"><img src="https://invelopkids.gr/wp-content/uploads/2022/11/xmas-gifts.png"></div>
+            <div class="slide"><img src="https://www.newmoney.gr/wp-content/uploads/2021/11/present-xmas-tree-pixabay.jpg"></div>
           </div>
           <button class="prev">❮</button>
           <button class="next">❯</button>
@@ -153,6 +153,7 @@ fetch('partials/layout.html')
 
   })
   .catch(err => console.error('Σφάλμα φόρτωσης layout:', err));
+
 
 
 
