@@ -138,7 +138,7 @@ header button:hover {
 
 
 #sideMenu ul li {
-  margin: 20px 0;
+  margin: 5px 0;
   text-align: center;
 }
 
@@ -237,6 +237,7 @@ header button:hover {
 .submenu-toggle.open::after {
   content: " ▲";
 }
+
 
 
 
