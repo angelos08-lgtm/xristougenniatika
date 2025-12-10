@@ -59,48 +59,56 @@ header {
     background: #ff2f58;
   }
 
-  /* ===== CAROUSEL ===== */
-  .carousel {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto 40px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px #0003;
-    background: #fff;
-  }
+/* ===== CAROUSEL ===== */
+.carousel {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px #0003;
+  background: #fff;
 
-  .slides {
-    display: flex;
-    width: 100%;
-    transition: transform 0.5s ease-in-out;
-  }
+  /* ΣΤΑΘΕΡΟ ΥΨΟΣ */
+  height: 400px; /* μπορείς να το αλλάξεις π.χ. 350, 500 κλπ */
+}
 
-  .slide {
-    min-width: 100%;
-  }
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%; /* παίρνει το σταθερό ύψος */
+  transition: transform 0.5s ease-in-out;
+}
 
-  .slide img {
-    width: 100%;
-    display: block;
-  }
+.slide {
+  min-width: 100%;
+  height: 100%;
+}
 
-  .carousel button.prev,
-  .carousel button.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    background: #ffffffaa;
-    padding: 10px 15px;
-    font-size: 25px;
-    cursor: pointer;
-    border-radius: 50%;
-  }
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* κρατάει αναλογίες και γεμίζει σωστά το πλαίσιο */
+  display: block;
+}
 
-  .carousel .prev { left: 10px; }
-  .carousel .next { right: 10px; }
+.carousel button.prev,
+.carousel button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: #ffffffaa;
+  padding: 10px 15px;
+  font-size: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel .prev { left: 10px; }
+.carousel .next { right: 10px; }
+
 
   /* ===== GRID ===== */
   .gift-grid {
@@ -193,5 +201,6 @@ header {
     0% { right: -300px; }
     100% { right: 110%; }
   }
+
 
 
